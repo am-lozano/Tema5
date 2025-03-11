@@ -1,4 +1,4 @@
-package herencia;
+package herencia.hora;
 
 public class PrincipalHora {
 
