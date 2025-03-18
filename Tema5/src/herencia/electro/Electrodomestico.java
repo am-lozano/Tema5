@@ -73,29 +73,22 @@ public class Electrodomestico {
 		return consumoEnergetico;
 	}
 
-	public void setConsumoEnergetico(ConsumoElec consumoEnergetico) {
-		this.consumoEnergetico = consumoEnergetico;
-	}
-
 	public ColorElec getColor() {
 		return color;
-	}
-
-	public void setColor(ColorElec color) {
-		this.color = color;
 	}
 
 	boolean comprobarConsumoEnergetico(char letra) {
 
 		boolean valido = false;
 
-		switch (letra) {
+		switch (Character.toUpperCase(letra)) {
 		case 'A', 'B', 'C', 'D', 'E', 'F' -> {
 
-			this.consumoEnergetico = ConsumoElec.valueOf(String.valueOf(letra));
+			this.consumoEnergetico = ConsumoElec.valueOf(String.valueOf(Character.toUpperCase(letra)));
 
 			valido = true;
 		}
+		default -> this.consumoEnergetico = ConsumoElec.valueOf(String.valueOf('F'));
 		}
 
 		return valido;
@@ -105,13 +98,14 @@ public class Electrodomestico {
 
 		boolean valido = false;
 
-		switch (color) {
+		switch (color.toUpperCase()) {
 		case "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS" -> {
 
-			this.color = ColorElec.valueOf(color);
+			this.color = ColorElec.valueOf(color.toUpperCase());
 
 			valido = true;
 		}
+		default -> this.color = ColorElec.valueOf("BLANCO");
 		}
 
 		return valido;
