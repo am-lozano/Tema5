@@ -1,0 +1,25 @@
+class Contacto
+
+	- String nombre
+	- int telefono
+	
+	getNombre()
+	getTelefono()
+	
+	equals (nombre)
+	
+----------------------
+
+class Persona extend Contacto
+
+	- int cumpleanyo
+	
+	getCumpleanyo()
+	
+---------------------	
+
+class Empresa extend Contacto
+
+	- String paginaWeb
+	
+	getPaginaWeb()

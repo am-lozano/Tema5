@@ -1,0 +1,16 @@
+class CuentaBancaria
+
+	- int numCuenta
+	- double saldo
+	- int numTitulares (3 max, min 1)
+
+	
+
+---------------------
+
+class Titular  
+
+	- String DNI
+	- String nombre
+	- String apellido
+	- int telefono

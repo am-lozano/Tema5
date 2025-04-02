@@ -1,0 +1,46 @@
+class abstract Ficha
+
+	- int id
+	- String titulo
+	
+	getId()
+	getTitulo()
+	
+	+ int prestamo();
+	
+------------------
+
+class abstract Libro extends Ficha
+
+	- String autor
+	- String editorial
+	
+	getAutor()
+	getEditorial()
+	
+-----------------
+
+class abstract Revista extends Ficha
+
+	- int numRevista
+	- int anyoPub
+	
+	getNumRevista()
+	getAnyoPub
+	
+------------------
+
+class abstract DVD extends Ficha
+
+	- String director
+	- int anyo
+	- Tipo tipo
+	
+	enum Tipo {PELICULA, DOCUMENTAL, SERIE}
+	
+	getDirector()
+	getAnyo()
+	
+	compruebaTipo() {}
+	
+------------------
